@@ -1,0 +1,36 @@
+.container {
+  width: 1200px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.letters_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around ;
+  width: 700px;
+}
+
+.letter {
+  background-color: #B2FFA9;
+  padding: 10px;
+  border-radius: 10%;
+  width: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.proposition {
+  border-left: solid 4px;
+  padding-left: 10px;
+}
+
+.score {
+  border-left: solid 4px;
+  padding-left: 10px;
+  background-color: #EFF6EE
+}
+.score p{
+  font-weight: bold;
+}

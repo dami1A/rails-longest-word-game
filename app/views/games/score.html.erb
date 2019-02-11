@@ -1,0 +1,12 @@
+<div class="proposition">
+    <p><%= "Your proposition is" %></p>
+    <p><%= @word.upcase %></p>
+</div>
+<br>
+<div class="score">
+  <p><%= @result[:message] %></p>
+  <p><%= @result[:score] %></p>
+</div>
+<br>
+<br>
+<%= link_to "Play again", "/new" %>
