@@ -6,7 +6,7 @@
 <div class="score">
   <p id="message"><%= @result[:message] %></p>
   <p><%= "Your game's score is #{@result[:score]}" %></p>
-  <p><%= "Your cumulative score is #{}" %></p>
+  <p><%= "Your cumulative score is #{(@cumulative_score * 100).round / 100.0}" %></p>
 </div>
 <br>
 <br>

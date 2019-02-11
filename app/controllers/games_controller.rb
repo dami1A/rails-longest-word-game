@@ -20,6 +20,11 @@ class GamesController < ApplicationController
     @executive_test = word_testeur(@word, @grid)
     @executive_test["found"] ? @result[:score] = ((1 / @result[:time])*100).round / 100.0 + @word.length.to_f : @result[:score] = 0
     @executive_test["found"] ? @result[:message] = "Congratulations! '#{@word.upcase}' is a valid English word!" : @result[:message] = @executive_test["error"]
+    cookies[@end_time] = @result[:score]
+    @cumulative_score = 0
+    cookies.each do |k, v|
+      @cumulative_score += v.to_f if k.to_time.class == Time
+    end
   end
 
   def word_testeur(word, grid)
